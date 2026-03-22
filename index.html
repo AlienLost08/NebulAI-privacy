@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NebulAI Privacy Policy</title>
+  <style>
+    :root {
+      --bg-1: #06070b;
+      --bg-2: #0b0f1a;
+      --bg-3: #0a1622;
+      --ink: #e6ecff;
+      --muted: #9aa6c4;
+      --accent: #00f5a0;
+      --accent-2: #00d9f5;
+      --card: rgba(14, 18, 32, 0.72);
+      --line: rgba(102, 118, 160, 0.25);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: radial-gradient(1200px 600px at 10% 0%, #0f1b2a 0%, transparent 60%),
+                  radial-gradient(900px 700px at 90% 20%, #0b2430 0%, transparent 55%),
+                  linear-gradient(180deg, var(--bg-1), var(--bg-2) 45%, var(--bg-3));
+      color: var(--ink);
+      font-family: "Georgia", "Times New Roman", serif;
+      line-height: 1.7;
+      min-height: 100vh;
+    }
+
+    .wrap {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 40px 20px 80px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 28px;
+      align-items: center;
+      padding: 24px 0 36px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .logo {
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      color: #00120b;
+      font-weight: 900;
+      font-size: 24px;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 10px 30px rgba(0, 245, 160, 0.25);
+    }
+
+    h1 {
+      font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+      font-size: clamp(28px, 4vw, 46px);
+      letter-spacing: 0.6px;
+      margin-bottom: 10px;
+    }
+
+    .sub {
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 560px;
+    }
+
+    .updated {
+      margin-top: 14px;
+      font-size: 13px;
+      color: #7280a3;
+    }
+
+    .orb-stage {
+      perspective: 900px;
+      height: 280px;
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+
+    .orb {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      position: relative;
+      transform-style: preserve-3d;
+      animation: spin 16s linear infinite;
+      background: radial-gradient(circle at 30% 25%, rgba(0, 245, 160, 0.85), rgba(0, 217, 245, 0.25) 40%, rgba(7, 12, 24, 0.9) 65%);
+      box-shadow: 0 0 60px rgba(0, 245, 160, 0.25),
+                  inset 0 0 40px rgba(0, 217, 245, 0.35);
+    }
+
+    .orb::before,
+    .orb::after {
+      content: "";
+      position: absolute;
+      inset: -18px;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 245, 160, 0.2);
+      transform: translateZ(40px);
+      animation: pulse 4s ease-in-out infinite;
+    }
+
+    .orb::after {
+      inset: -35px;
+      border: 1px dashed rgba(0, 217, 245, 0.4);
+      transform: translateZ(-40px) rotateX(65deg);
+      animation: pulse 6s ease-in-out infinite reverse;
+    }
+
+    .ring {
+      position: absolute;
+      width: 230px;
+      height: 230px;
+      border-radius: 50%;
+      border: 2px solid rgba(0, 245, 160, 0.25);
+      transform: rotateX(68deg) rotateZ(15deg);
+      box-shadow: 0 0 24px rgba(0, 217, 245, 0.25);
+      animation: ring 10s linear infinite;
+    }
+
+    @keyframes spin {
+      0% { transform: rotateY(0deg) rotateX(0deg); }
+      50% { transform: rotateY(180deg) rotateX(20deg); }
+      100% { transform: rotateY(360deg) rotateX(0deg); }
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 0.35; }
+      50% { opacity: 0.9; }
+    }
+
+    @keyframes ring {
+      0% { transform: rotateX(68deg) rotateZ(0deg); }
+      100% { transform: rotateX(68deg) rotateZ(360deg); }
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 10px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 20px 22px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    .card h3 {
+      font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+      font-size: 16px;
+      letter-spacing: 0.4px;
+      margin-bottom: 8px;
+      color: #dfe7ff;
+    }
+
+    .card p, .card li {
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    ul { padding-left: 18px; margin-top: 8px; }
+    li { margin-bottom: 6px; }
+
+    .section {
+      margin-top: 28px;
+      padding-top: 8px;
+    }
+
+    .section h2 {
+      font-family: "Trebuchet MS", "Lucida Grande", sans-serif;
+      font-size: 20px;
+      margin-bottom: 8px;
+      color: #f4f7ff;
+    }
+
+    .section p {
+      color: var(--muted);
+      font-size: 15px;
+      margin-bottom: 10px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid rgba(0, 245, 160, 0.35);
+      background: rgba(0, 245, 160, 0.08);
+      color: #baf9e1;
+      font-size: 12px;
+      letter-spacing: 0.6px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 20px;
+      border-top: 1px solid var(--line);
+      color: #7c8ab0;
+      font-size: 13px;
+      text-align: center;
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    @media (max-width: 860px) {
+      .hero { grid-template-columns: 1fr; }
+      .orb-stage { height: 240px; }
+      .cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <div class="brand">
+          <div class="logo">N</div>
+          <div>
+            <div class="badge">Privacy Policy</div>
+            <h1>NebulAI</h1>
+          </div>
+        </div>
+        <p class="sub">
+          NebulAI is a privacy-first browser extension that summarizes pages, chats with content,
+          explains highlighted text, and analyzes images using your own AI API key.
+        </p>
+        <div class="updated">Last updated: March 22, 2026</div>
+      </div>
+      <div class="orb-stage" aria-hidden="true">
+        <div class="orb"></div>
+        <div class="ring"></div>
+      </div>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <h3>What We Collect</h3>
+        <p>We do not collect or store personal data on our servers. Everything stays in your browser.</p>
+        <ul>
+          <li>API keys are stored locally in <code>chrome.storage.local</code>.</li>
+          <li>Page content and images are processed only when you trigger an action.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>How Your Data Flows</h3>
+        <p>When you use NebulAI, your browser sends content directly to your chosen AI provider.</p>
+        <ul>
+          <li>OpenAI API: api.openai.com</li>
+          <li>Google Gemini API: generativelanguage.googleapis.com</li>
+          <li>Anthropic API: api.anthropic.com</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>1. Overview</h2>
+      <p>
+        NebulAI is a browser extension that summarizes web pages, chats with page content,
+        explains highlighted text, and analyzes images. All AI requests are made directly
+        from your browser to the provider you choose, using your own API key.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>2. Data We Do Not Collect</h2>
+      <p>We do not collect, store, transmit, or sell any of the following:</p>
+      <ul>
+        <li>API keys</li>
+        <li>Web page content, images, or queries you analyze</li>
+        <li>Browsing history or visited URLs</li>
+        <li>Personal identification data</li>
+        <li>Analytics, telemetry, or crash reports</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>3. Local Storage</h2>
+      <p>
+        NebulAI stores API keys and preferences locally in your browser via
+        <code>chrome.storage.local</code>. This data stays on your device and is never
+        sent to any server operated by us.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>4. Third-Party API Communication</h2>
+      <p>
+        When you use NebulAI, your browser communicates directly with the AI provider you select.
+        Their privacy policies apply to those requests:
+      </p>
+      <ul>
+        <li><a href="https://openai.com/policies/privacy-policy" target="_blank" rel="noopener">OpenAI Privacy Policy</a></li>
+        <li><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></li>
+        <li><a href="https://www.anthropic.com/legal/privacy" target="_blank" rel="noopener">Anthropic Privacy Policy</a></li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>5. Permissions</h2>
+      <p>NebulAI uses the following permissions only to provide core features:</p>
+      <ul>
+        <li><strong>activeTab</strong> to read the current page when you trigger an action</li>
+        <li><strong>storage</strong> to save API keys and preferences locally</li>
+        <li><strong>scripting</strong> to extract page content and selected text</li>
+        <li><strong>contextMenus</strong> to enable right-click explain actions</li>
+        <li><strong>sidePanel</strong> to show the NebulAI interface</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>6. No Tracking or Ads</h2>
+      <p>
+        NebulAI contains no tracking scripts, advertising SDKs, or analytics libraries.
+        We do not monetize user data.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>7. Children’s Privacy</h2>
+      <p>
+        NebulAI is not intended for children under 13. We do not knowingly collect
+        information from children.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>8. Changes</h2>
+      <p>
+        We may update this policy over time. Any changes will be posted here with an updated date.
+      </p>
+    </div>
+
+    <div class="section">
+      <h2>9. Contact</h2>
+      <p>
+        For questions about this policy, contact us at
+        <a href="mailto:alien7lost@gmail.com">alien7lost@gmail.com</a>.
+      </p>
+    </div>
+
+    <footer>
+      &copy; 2026 NebulAI. All rights reserved.
+    </footer>
+  </div>
+</body>
+</html>
